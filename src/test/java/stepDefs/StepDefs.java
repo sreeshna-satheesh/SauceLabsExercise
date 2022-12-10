@@ -122,6 +122,7 @@ public class StepDefs extends BaseTest {
 	@Then("verify the price sorted properly")
 	public void verify_the_price_sorted_properly() {
 		lp.verifySort();
+		driver.close();
 	}
 
 }

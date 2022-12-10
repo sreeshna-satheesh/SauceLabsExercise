@@ -137,18 +137,10 @@ public class Login {
 	public void verifySort() {
 		String pricesList = null;
 		String priceCurrency = null;
-		
-		/* Double arr[] = new Double[6]; */
 		List<Double> values = new ArrayList<Double>();
 		List<WebElement> elements = driver.findElements(By.className("inventory_item_price"));
 		for (WebElement element : elements) {
 			priceCurrency = element.getText();
-			/*
-			 * String [] s = priceCurrency.split("$");
-			 * 
-			 * values.add(Integer.parseInt(s[1])); System.out.println(values);
-			 */
-
 			pricesList = priceCurrency.replaceAll("[^0-9.]", "");
 			Double pL = Double.parseDouble(pricesList);
 			System.out.println(pL);
@@ -156,18 +148,6 @@ public class Login {
 			
 			}
 			System.out.println(values);
-			
-			
-			/*
-			 * Object[] value = values.toArray(); System.out.println(value);
-			 */
-			/*
-			 * for(int x=0; x<value.length; x++) {
-			 * 
-			 * if (value[x]<value[x+1]) { System.out.println("List is sorted"); }
-			 * 
-			 * }
-			 */
 		
 
 	}
